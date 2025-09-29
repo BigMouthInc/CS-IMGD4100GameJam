@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://cohhxoscsqtkv"]
+[gd_scene load_steps=5 format=3 uid="uid://cohhxoscsqtkv"]
+
+[ext_resource type="PackedScene" uid="uid://ed14snjo0hx4" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://sudloqmybqdx" path="res://Assets/Dirt.png" id="2_bo1nx"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
+texture = ExtResource("2_bo1nx")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jjvhh"]
+sources/0 = SubResource("TileSetAtlasSource_8gbba")
 
 [node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_jjgbg")]
+position = Vector2(31, -26)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_jjvhh")
+format = 2
