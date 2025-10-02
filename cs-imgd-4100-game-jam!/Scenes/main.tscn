@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://cohhxoscsqtkv"]
+[gd_scene load_steps=6 format=3 uid="uid://cohhxoscsqtkv"]
 
 [ext_resource type="PackedScene" uid="uid://ed14snjo0hx4" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://sudloqmybqdx" path="res://Assets/Dirt.png" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://itvfh853o02w" path="res://Scenes/block.tscn" id="3_8gbba"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
 texture = ExtResource("2_bo1nx")
 0:0/size_in_atlas = Vector2i(2, 2)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.827568, -15.827568, 15.827566, -15.827568, 16.007425, 16.367144, -16.007427, 16.187284)
 
 [sub_resource type="TileSet" id="TileSet_jjvhh"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8gbba")
 
 [node name="Main" type="Node2D"]
@@ -22,3 +25,6 @@ format = 2
 layer_0/tile_data = PackedInt32Array(65538, 0, 0, 65536, 0, 0, 65540, 0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Block" parent="." instance=ExtResource("3_8gbba")]
+position = Vector2(67, -61)
