@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cohhxoscsqtkv"]
+[gd_scene load_steps=7 format=3 uid="uid://cohhxoscsqtkv"]
 
 [ext_resource type="PackedScene" uid="uid://ed14snjo0hx4" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://uy76r1thlr2y" path="res://Scenes/game_manager.gd" id="1_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://sudloqmybqdx" path="res://Assets/Dirt.png" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://itvfh853o02w" path="res://Scenes/block.tscn" id="3_8gbba"]
 
@@ -16,6 +17,10 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8gbba")
 
 [node name="Main" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_jjvhh")
 
 [node name="Player" parent="." instance=ExtResource("1_jjgbg")]
 position = Vector2(88, -72)
