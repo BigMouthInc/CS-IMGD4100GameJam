@@ -1,6 +1,5 @@
 extends Node
 
-var current_score = 0
 @onready var block = $"../Spawner/Block"
 
 func _ready() -> void:
@@ -8,5 +7,5 @@ func _ready() -> void:
 
 	
 func add_score(amount: int):
-	current_score += amount
-	print("Score: ", current_score)
+	GlobalVars.current_score += amount
+	print("Score: ", GlobalVars.current_score)

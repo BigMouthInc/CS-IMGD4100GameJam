@@ -58,8 +58,8 @@ offset_bottom = -264.0
 theme_override_font_sizes/font_size = 16
 
 [node name="ScoreCt" type="Label" parent="."]
-offset_left = 4.0
-offset_top = -305.0
-offset_right = 108.0
-offset_bottom = -241.0
+offset_left = 3.0
+offset_top = -328.0
+offset_right = 107.0
+offset_bottom = -264.0
 theme_override_font_sizes/font_size = 16
