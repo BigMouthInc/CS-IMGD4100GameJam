@@ -1,6 +1,6 @@
 extends Node
 
-@onready var block = $"../Spawner/Block"
+@onready var block = $"../Block"
 
 func _ready() -> void:
 	block.point_signal.connect(add_score)
