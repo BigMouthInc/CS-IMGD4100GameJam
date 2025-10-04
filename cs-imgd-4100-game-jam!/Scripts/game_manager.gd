@@ -5,9 +5,8 @@ var current_score = 0
 
 func _ready() -> void:
 	block.point_signal.connect(add_score)
-	print("wofwofn")
 
 	
 func add_score(amount: int):
 	current_score += amount
-	print("Signal Recieved")
+	print("Score: ", current_score)
