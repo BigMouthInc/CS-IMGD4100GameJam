@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxirp804ss1pp"]
+
+[ext_resource type="Script" uid="uid://ci3m3cfld0xc2" path="res://Scripts/buttons.gd" id="1_ojehl"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(192, 104)
+zoom = Vector2(3, 3)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 106.0
+offset_top = 22.0
+offset_right = 278.0
+offset_bottom = 108.75
+theme_override_font_sizes/font_size = 30
+text = "Game Over!
+Restart?"
+horizontal_alignment = 1
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 145.0
+offset_top = 126.0
+offset_right = 239.0
+offset_bottom = 153.0
+text = "Restart"
+script = ExtResource("1_ojehl")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 145.0
+offset_top = 165.0
+offset_right = 239.0
+offset_bottom = 196.0
+text = "Quit"
+script = ExtResource("1_ojehl")
+
+[connection signal="button_up" from="Restart" to="Restart" method="_on_restart_button_up"]
+[connection signal="button_up" from="Restart" to="Restart" method="_on_button_up"]
+[connection signal="button_up" from="Quit" to="Restart" method="_on_quit_button_up"]
+[connection signal="button_up" from="Quit" to="Quit" method="_on_button_up"]

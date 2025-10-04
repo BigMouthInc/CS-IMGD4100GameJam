@@ -48,7 +48,7 @@ autostart = true
 position = Vector2(168, -80)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 3.0
 one_shot = true
 autostart = true
 
@@ -65,3 +65,4 @@ offset_right = 43.0
 offset_bottom = -284.0
 
 [connection signal="timeout" from="Spawner/Block Timer" to="Spawner" method="_on_block_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
