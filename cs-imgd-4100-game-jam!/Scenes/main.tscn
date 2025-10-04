@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cohhxoscsqtkv"]
 
 [ext_resource type="PackedScene" uid="uid://ed14snjo0hx4" path="res://Scenes/player.tscn" id="1_jjgbg"]
-[ext_resource type="Script" path="res://Scenes/main.gd" id="1_jjvhh"]
+[ext_resource type="Script" uid="uid://2n7yx7pp8o07" path="res://Scripts/main.gd" id="1_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://sudloqmybqdx" path="res://Assets/Dirt.png" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://uy76r1thlr2y" path="res://Scripts/game_manager.gd" id="2_kry3j"]
 [ext_resource type="PackedScene" uid="uid://itvfh853o02w" path="res://Scenes/block.tscn" id="3_8gbba"]
@@ -49,4 +49,9 @@ offset_left = 3.0
 offset_top = -328.0
 offset_right = 107.0
 offset_bottom = -264.0
-theme_override_font_sizes/font_size = 16
+
+[node name="ScoreCt" type="Label" parent="."]
+offset_left = 3.0
+offset_top = -307.0
+offset_right = 43.0
+offset_bottom = -284.0
