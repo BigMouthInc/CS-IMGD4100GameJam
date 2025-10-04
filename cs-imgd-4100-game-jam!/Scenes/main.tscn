@@ -39,6 +39,12 @@ zoom = Vector2(2, 2)
 [node name="Block" parent="." instance=ExtResource("3_8gbba")]
 position = Vector2(168, -80)
 
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("5_21xkr")
+
+[node name="Enemy Timer" type="Timer" parent="Spawner"]
+autostart = true
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0
 one_shot = true
@@ -55,3 +61,6 @@ offset_left = 3.0
 offset_top = -307.0
 offset_right = 43.0
 offset_bottom = -284.0
+theme_override_font_sizes/font_size = 16
+
+[connection signal="timeout" from="Spawner/Enemy Timer" to="Spawner" method="_on_enemy_timer_timeout"]
