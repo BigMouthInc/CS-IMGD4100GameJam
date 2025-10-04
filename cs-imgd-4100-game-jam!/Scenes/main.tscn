@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cohhxoscsqtkv"]
+[gd_scene load_steps=9 format=3 uid="uid://cohhxoscsqtkv"]
 
 [ext_resource type="PackedScene" uid="uid://ed14snjo0hx4" path="res://Scenes/player.tscn" id="1_jjgbg"]
-[ext_resource type="Script" path="res://Scenes/main.gd" id="1_jjvhh"]
+[ext_resource type="Script" uid="uid://2n7yx7pp8o07" path="res://Scripts/main.gd" id="1_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://sudloqmybqdx" path="res://Assets/Dirt.png" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://uy76r1thlr2y" path="res://Scripts/game_manager.gd" id="2_kry3j"]
 [ext_resource type="PackedScene" uid="uid://itvfh853o02w" path="res://Scenes/block.tscn" id="3_8gbba"]
+[ext_resource type="Script" uid="uid://c3nxdwlg8ufw" path="res://Scripts/spawner.gd" id="5_21xkr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
 texture = ExtResource("2_bo1nx")
@@ -36,8 +37,13 @@ layer_0/tile_data = PackedInt32Array(-65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -
 position = Vector2(288, -168)
 zoom = Vector2(2, 2)
 
-[node name="Block" parent="." instance=ExtResource("3_8gbba")]
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("5_21xkr")
+
+[node name="Block" parent="Spawner" instance=ExtResource("3_8gbba")]
 position = Vector2(168, -80)
+
+[node name="Enemy Timer" type="Timer" parent="Spawner"]
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0
