@@ -1,9 +1,12 @@
 extends Node
 
 var current_score = 0
+@onready var block = $"../Block"
 
 func _ready() -> void:
-	get_node("./block").point_signal.connect(add_score)
+	block.point_signal.connect(add_score)
+	print("wofwofn")
+
 	
 func add_score(amount: int):
 	current_score += amount
