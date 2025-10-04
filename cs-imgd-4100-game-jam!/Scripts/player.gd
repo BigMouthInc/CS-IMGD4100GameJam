@@ -13,7 +13,6 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		print("Jump!!!")
 		
 	if Input.is_action_just_pressed("teleport"):
 		global_position.y += 1000000000
