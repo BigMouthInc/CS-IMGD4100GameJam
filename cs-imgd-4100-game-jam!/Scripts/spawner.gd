@@ -4,8 +4,8 @@ extends Node2D
 
 func _on_block_timer_timeout() -> void:
 	
-	var random_x = randf_range(0, 550)
-	var random_y = randf_range(-330, 0)
+	var random_x = randf_range(50, 550)
+	var random_y = randf_range(-330, -50)
 	var random_position = Vector2(random_x, random_y)
 	
 	var placeBlock  = block.instantiate()
