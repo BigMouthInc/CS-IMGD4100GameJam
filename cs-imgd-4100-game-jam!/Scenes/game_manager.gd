@@ -1,11 +1,10 @@
 extends Node
 
+var current_score = 0
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	get_node("./block").point_signal.connect(add_score)
+	
+func add_score(amount: int):
+	current_score += amount
+	print("Signal Recieved")
