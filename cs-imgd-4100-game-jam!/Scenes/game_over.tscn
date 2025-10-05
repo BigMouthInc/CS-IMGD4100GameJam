@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxirp804ss1pp"]
+[gd_scene load_steps=3 format=3 uid="uid://dxirp804ss1pp"]
 
+[ext_resource type="Script" uid="uid://bsy1s6haw8se2" path="res://Scripts/game_over.gd" id="1_8fo1c"]
 [ext_resource type="Script" uid="uid://ci3m3cfld0xc2" path="res://Scripts/buttons.gd" id="1_ojehl"]
 
 [node name="GameOver" type="Node2D"]
+script = ExtResource("1_8fo1c")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(192, 104)
@@ -33,6 +35,20 @@ offset_right = 239.0
 offset_bottom = 196.0
 text = "Quit"
 script = ExtResource("1_ojehl")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 48.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 12
+
+[node name="HighLabel" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 104.0
+offset_right = 48.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 12
 
 [connection signal="button_up" from="Restart" to="Restart" method="_on_restart_button_up"]
 [connection signal="button_up" from="Restart" to="Restart" method="_on_button_up"]

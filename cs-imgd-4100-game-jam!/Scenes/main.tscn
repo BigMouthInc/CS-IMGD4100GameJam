@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://sudloqmybqdx" path="res://Assets/Dirt.png" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://uy76r1thlr2y" path="res://Scripts/game_manager.gd" id="2_kry3j"]
 [ext_resource type="PackedScene" uid="uid://itvfh853o02w" path="res://Scenes/block.tscn" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://c7ophsgipx301" path="res://Scenes/platform.tscn" id="5_6bp64"]
+[ext_resource type="PackedScene" path="res://Scenes/platform.tscn" id="5_6bp64"]
 [ext_resource type="Script" uid="uid://c3nxdwlg8ufw" path="res://Scripts/spawner.gd" id="5_21xkr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
@@ -32,23 +32,11 @@ position = Vector2(88, -72)
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_jjvhh")
 format = 2
-layer_0/tile_data = PackedInt32Array(-65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65537, 0, 0, -131073, 0, 0, -196609, 0, 0, -262145, 0, 0, -327681, 0, 0, -393217, 0, 0, -458753, 0, 0, -524289, 0, 0, -589825, 0, 0, -655361, 0, 0, -131054, 0, 0, -196590, 0, 0, -262126, 0, 0, -327662, 0, 0, -393198, 0, 0, -458734, 0, 0, -524270, 0, 0, -589806, 0, 0, -655342, 0, 0, -720878, 0, 0, -786415, 0, 0, -786416, 0, 0, -786417, 0, 0, -786418, 0, 0, -786419, 0, 0, -786420, 0, 0, -786421, 0, 0, -786422, 0, 0, -786423, 0, 0, -786424, 0, 0, -786425, 0, 0, -786426, 0, 0, -786427, 0, 0, -786428, 0, 0, -786429, 0, 0, -786430, 0, 0, -786431, 0, 0, -786432, 0, 0)
+layer_0/tile_data = PackedInt32Array(-65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65537, 0, 0, -131073, 0, 0, -196609, 0, 0, -262145, 0, 0, -327681, 0, 0, -393217, 0, 0, -458753, 0, 0, -524289, 0, 0, -589825, 0, 0, -655361, 0, 0, -131054, 0, 0, -196590, 0, 0, -262126, 0, 0, -327662, 0, 0, -393198, 0, 0, -458734, 0, 0, -524270, 0, 0, -589806, 0, 0, -655342, 0, 0, -720878, 0, 0, -786415, 0, 0, -786416, 0, 0, -786417, 0, 0, -786418, 0, 0, -786419, 0, 0, -786420, 0, 0, -786421, 0, 0, -786422, 0, 0, -786423, 0, 0, -786424, 0, 0, -786425, 0, 0, -786426, 0, 0, -786427, 0, 0, -786428, 0, 0, -786429, 0, 0, -786430, 0, 0, -786431, 0, 0, -786432, 0, 0, -720896, 0, 0, -720895, 0, 0, -720894, 0, 0, -720893, 0, 0, -720892, 0, 0, -720891, 0, 0, -720890, 0, 0, -720889, 0, 0, -720888, 0, 0, -720887, 0, 0, -720886, 0, 0, -720885, 0, 0, -720883, 0, 0, -720884, 0, 0, -720882, 0, 0, -720881, 0, 0, -720880, 0, 0, -720879, 0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(288, -168)
 zoom = Vector2(2, 2)
-
-[node name="platform" parent="." instance=ExtResource("5_6bp64")]
-position = Vector2(128, -107)
-
-[node name="platform2" parent="." instance=ExtResource("5_6bp64")]
-position = Vector2(437, -111)
-
-[node name="platform3" parent="." instance=ExtResource("5_6bp64")]
-position = Vector2(76, -185)
-
-[node name="platform4" parent="." instance=ExtResource("5_6bp64")]
-position = Vector2(482, -187)
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(168, -80)
@@ -61,7 +49,7 @@ autostart = true
 position = Vector2(168, -80)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 30.0
 one_shot = true
 autostart = true
 
@@ -76,6 +64,49 @@ offset_left = 3.0
 offset_top = -307.0
 offset_right = 43.0
 offset_bottom = -284.0
+
+[node name="Platforms" type="Node" parent="."]
+
+[node name="platform" parent="Platforms" instance=ExtResource("5_6bp64")]
+position = Vector2(128, -88)
+
+[node name="platform2" parent="Platforms" instance=ExtResource("5_6bp64")]
+position = Vector2(440, -96)
+
+[node name="platform3" parent="Platforms" instance=ExtResource("5_6bp64")]
+position = Vector2(64, -160)
+
+[node name="platform4" parent="Platforms" instance=ExtResource("5_6bp64")]
+position = Vector2(520, -168)
+
+[node name="platform5" parent="Platforms" instance=ExtResource("5_6bp64")]
+position = Vector2(192, -224)
+
+[node name="platform6" parent="Platforms" instance=ExtResource("5_6bp64")]
+position = Vector2(400, -184)
+
+[node name="platform7" parent="Platforms" instance=ExtResource("5_6bp64")]
+position = Vector2(312, -128)
+
+[node name="platform8" parent="Platforms" instance=ExtResource("5_6bp64")]
+position = Vector2(104, -240)
+
+[node name="platform9" parent="Platforms" instance=ExtResource("5_6bp64")]
+position = Vector2(328, -248)
+
+[node name="platform10" parent="Platforms" instance=ExtResource("5_6bp64")]
+position = Vector2(480, -248)
+
+[node name="platform11" parent="Platforms" instance=ExtResource("5_6bp64")]
+position = Vector2(216, -120)
+
+[node name="Background" type="ColorRect" parent="."]
+z_index = -100
+offset_left = -8.0
+offset_top = -336.0
+offset_right = 584.0
+offset_bottom = -24.0
+color = Color(0.14147198, 0.072558336, 0.3101026, 1)
 
 [connection signal="timeout" from="Spawner/Block Timer" to="Spawner" method="_on_block_timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

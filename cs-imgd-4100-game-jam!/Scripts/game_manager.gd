@@ -8,4 +8,3 @@ func _ready() -> void:
 	
 func add_score(amount: int):
 	GlobalVars.current_score += amount
-	print("Score: ", GlobalVars.current_score)
