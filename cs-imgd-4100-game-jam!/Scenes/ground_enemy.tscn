@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7lx527nj4qyh"]
+[gd_scene load_steps=6 format=3 uid="uid://b7lx527nj4qyh"]
 
 [ext_resource type="Script" uid="uid://tqbu2k2wm1y8" path="res://Scripts/ground_enemy.gd" id="1_qfj55"]
 [ext_resource type="Texture2D" uid="uid://bc2vxf38sqdyx" path="res://Assets/Ground-Enemy.png" id="2_gufma"]
+[ext_resource type="PackedScene" uid="uid://df814xk4mi712" path="res://Scenes/death.tscn" id="3_gufma"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8b13n"]
 animations = [{
@@ -24,8 +25,10 @@ script = ExtResource("1_qfj55")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8b13n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_27w5s")
-
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(-10, 0)
+
+[node name="DEATH" parent="." instance=ExtResource("3_gufma")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DEATH"]
+shape = SubResource("CapsuleShape2D_27w5s")
