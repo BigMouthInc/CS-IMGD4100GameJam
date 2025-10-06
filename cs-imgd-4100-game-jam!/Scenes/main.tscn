@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://sudloqmybqdx" path="res://Assets/Dirt.png" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://uy76r1thlr2y" path="res://Scripts/game_manager.gd" id="2_kry3j"]
 [ext_resource type="PackedScene" uid="uid://itvfh853o02w" path="res://Scenes/block.tscn" id="3_8gbba"]
-[ext_resource type="PackedScene" path="res://Scenes/platform.tscn" id="5_6bp64"]
+[ext_resource type="PackedScene" uid="uid://c7ophsgipx301" path="res://Scenes/platform.tscn" id="5_6bp64"]
 [ext_resource type="Script" uid="uid://c3nxdwlg8ufw" path="res://Scripts/spawner.gd" id="5_21xkr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
@@ -71,22 +71,16 @@ offset_bottom = -284.0
 position = Vector2(128, -88)
 
 [node name="platform2" parent="Platforms" instance=ExtResource("5_6bp64")]
-position = Vector2(440, -96)
+position = Vector2(437, -79)
 
 [node name="platform3" parent="Platforms" instance=ExtResource("5_6bp64")]
-position = Vector2(64, -160)
-
-[node name="platform4" parent="Platforms" instance=ExtResource("5_6bp64")]
-position = Vector2(520, -168)
-
-[node name="platform5" parent="Platforms" instance=ExtResource("5_6bp64")]
-position = Vector2(192, -224)
+position = Vector2(36, -161)
 
 [node name="platform6" parent="Platforms" instance=ExtResource("5_6bp64")]
-position = Vector2(400, -184)
+position = Vector2(408, -177)
 
 [node name="platform7" parent="Platforms" instance=ExtResource("5_6bp64")]
-position = Vector2(312, -128)
+position = Vector2(323, -127)
 
 [node name="platform8" parent="Platforms" instance=ExtResource("5_6bp64")]
 position = Vector2(104, -240)
@@ -95,10 +89,10 @@ position = Vector2(104, -240)
 position = Vector2(328, -248)
 
 [node name="platform10" parent="Platforms" instance=ExtResource("5_6bp64")]
-position = Vector2(480, -248)
+position = Vector2(506, -228)
 
 [node name="platform11" parent="Platforms" instance=ExtResource("5_6bp64")]
-position = Vector2(216, -120)
+position = Vector2(201, -145)
 
 [node name="Background" type="ColorRect" parent="."]
 z_index = -100
