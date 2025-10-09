@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7lx527nj4qyh"]
+[gd_scene load_steps=7 format=3 uid="uid://b7lx527nj4qyh"]
 
 [ext_resource type="Script" uid="uid://tqbu2k2wm1y8" path="res://Scripts/ground_enemy.gd" id="1_qfj55"]
 [ext_resource type="Texture2D" uid="uid://bc2vxf38sqdyx" path="res://Assets/Ground-Enemy.png" id="2_gufma"]
 [ext_resource type="PackedScene" uid="uid://df814xk4mi712" path="res://Scenes/death.tscn" id="3_gufma"]
+[ext_resource type="AudioStream" uid="uid://cldk14b3kvto1" path="res://Assets/415079__harrietniamh__video-game-death-sound-effect.wav" id="4_8b13n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8b13n"]
 animations = [{
@@ -32,3 +33,6 @@ target_position = Vector2(-10, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DEATH"]
 shape = SubResource("CapsuleShape2D_27w5s")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="DEATH"]
+stream = ExtResource("4_8b13n")
