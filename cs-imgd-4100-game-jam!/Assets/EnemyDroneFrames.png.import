@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccff3xca3mcui"
-path="res://.godot/imported/EnemyDrone.png-67bbf04c970667e0b390f1c4444c9dd1.ctex"
+uid="uid://fbvohxg86sw5"
+path="res://.godot/imported/EnemyDroneFrames.png-5ec3c6c037d6e8274c098570690ab840.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/EnemyDrone.png"
-dest_files=["res://.godot/imported/EnemyDrone.png-67bbf04c970667e0b390f1c4444c9dd1.ctex"]
+source_file="res://Assets/EnemyDroneFrames.png"
+dest_files=["res://.godot/imported/EnemyDroneFrames.png-5ec3c6c037d6e8274c098570690ab840.ctex"]
 
 [params]
 

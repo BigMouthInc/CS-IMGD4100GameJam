@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cohhxoscsqtkv"]
+[gd_scene load_steps=13 format=3 uid="uid://cohhxoscsqtkv"]
 
 [ext_resource type="PackedScene" uid="uid://ed14snjo0hx4" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://2n7yx7pp8o07" path="res://Scripts/main.gd" id="1_jjvhh"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://c3nxdwlg8ufw" path="res://Scripts/spawner.gd" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://chtxtshfw60f" path="res://Scenes/drone.tscn" id="5_344ge"]
 [ext_resource type="PackedScene" uid="uid://b7lx527nj4qyh" path="res://Scenes/ground_enemy.tscn" id="7_344ge"]
+[ext_resource type="Texture2D" uid="uid://cpu0cx2aoj05r" path="res://Assets/SpaceBG.png" id="10_hptm8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
 texture = ExtResource("2_bo1nx")
@@ -112,13 +113,11 @@ position = Vector2(506, -228)
 z_index = -1
 position = Vector2(201, -145)
 
-[node name="Background" type="ColorRect" parent="."]
-z_index = -100
-offset_left = -8.0
-offset_top = -336.0
-offset_right = 584.0
-offset_bottom = -24.0
-color = Color(0.14147198, 0.072558336, 0.3101026, 1)
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -135
+position = Vector2(288, -176)
+scale = Vector2(3.0315788, 2.8799999)
+texture = ExtResource("10_hptm8")
 
 [connection signal="timeout" from="Spawner/Block Timer" to="Spawner" method="_on_block_timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
